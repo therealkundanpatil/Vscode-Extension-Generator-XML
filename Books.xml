@@ -1,0 +1,324 @@
+<CATALOG>
+	<SONGS>
+		<CD>
+			<TITLE>Empire Burlesque</TITLE>
+			<ARTIST>Bob Dylan</ARTIST>
+			<COUNTRY>USA</COUNTRY>
+			<COMPANY>Columbia</COMPANY>
+			<PRICE>10.90</PRICE>
+			<YEAR>1985</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Hide your heart</TITLE>
+			<ARTIST>Bonnie Tyler</ARTIST>
+			<COUNTRY>UK</COUNTRY>
+			<COMPANY>CBS Records</COMPANY>
+			<PRICE>9.90</PRICE>
+			<YEAR>1988</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Greatest Hits</TITLE>
+			<ARTIST>Dolly Parton</ARTIST>
+			<COUNTRY>USA</COUNTRY>
+			<COMPANY>RCA</COMPANY>
+			<PRICE>9.90</PRICE>
+			<YEAR>1982</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Still got the blues</TITLE>
+			<ARTIST>Gary Moore</ARTIST>
+			<COUNTRY>UK</COUNTRY>
+			<COMPANY>Virgin records</COMPANY>
+			<PRICE>10.20</PRICE>
+			<YEAR>1990</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Eros</TITLE>
+			<ARTIST>Eros Ramazzotti</ARTIST>
+			<COUNTRY>EU</COUNTRY>
+			<COMPANY>BMG</COMPANY>
+			<PRICE>9.90</PRICE>
+			<YEAR>1997</YEAR>
+		</CD>
+		<CD>
+			<TITLE>One night only</TITLE>
+			<ARTIST>Bee Gees</ARTIST>
+			<COUNTRY>UK</COUNTRY>
+			<COMPANY>Polydor</COMPANY>
+			<PRICE>10.90</PRICE>
+			<YEAR>1998</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Sylvias Mother</TITLE>
+			<ARTIST>Dr.Hook</ARTIST>
+			<COUNTRY>UK</COUNTRY>
+			<COMPANY>CBS</COMPANY>
+			<PRICE>8.10</PRICE>
+			<YEAR>1973</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Maggie May</TITLE>
+			<ARTIST>Rod Stewart</ARTIST>
+			<COUNTRY>UK</COUNTRY>
+			<COMPANY>Pickwick</COMPANY>
+			<PRICE>8.50</PRICE>
+			<YEAR>1990</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Romanza</TITLE>
+			<ARTIST>Andrea Bocelli</ARTIST>
+			<COUNTRY>EU</COUNTRY>
+			<COMPANY>Polydor</COMPANY>
+			<PRICE>10.80</PRICE>
+			<YEAR>1996</YEAR>
+		</CD>
+		<CD>
+			<TITLE>When a man loves a woman</TITLE>
+			<ARTIST>Percy Sledge</ARTIST>
+			<COUNTRY>USA</COUNTRY>
+			<COMPANY>Atlantic</COMPANY>
+			<PRICE>8.70</PRICE>
+			<YEAR>1987</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Black angel</TITLE>
+			<ARTIST>Savage Rose</ARTIST>
+			<COUNTRY>EU</COUNTRY>
+			<COMPANY>Mega</COMPANY>
+			<PRICE>10.90</PRICE>
+			<YEAR>1995</YEAR>
+		</CD>
+		<CD>
+			<TITLE>1999 Grammy Nominees</TITLE>
+			<ARTIST>Many</ARTIST>
+			<COUNTRY>USA</COUNTRY>
+			<COMPANY>Grammy</COMPANY>
+			<PRICE>10.20</PRICE>
+			<YEAR>1999</YEAR>
+		</CD>
+		<CD>
+			<TITLE>For the good times</TITLE>
+			<ARTIST>Kenny Rogers</ARTIST>
+			<COUNTRY>UK</COUNTRY>
+			<COMPANY>Mucik Master</COMPANY>
+			<PRICE>8.70</PRICE>
+			<YEAR>1995</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Big Willie style</TITLE>
+			<ARTIST>Will Smith</ARTIST>
+			<COUNTRY>USA</COUNTRY>
+			<COMPANY>Columbia</COMPANY>
+			<PRICE>9.90</PRICE>
+			<YEAR>1997</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Tupelo Honey</TITLE>
+			<ARTIST>Van Morrison</ARTIST>
+			<COUNTRY>UK</COUNTRY>
+			<COMPANY>Polydor</COMPANY>
+			<PRICE>8.20</PRICE>
+			<YEAR>1971</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Soulsville</TITLE>
+			<ARTIST>Jorn Hoel</ARTIST>
+			<COUNTRY>Norway</COUNTRY>
+			<COMPANY>WEA</COMPANY>
+			<PRICE>7.90</PRICE>
+			<YEAR>1996</YEAR>
+		</CD>
+		<CD>
+			<TITLE>The very best of</TITLE>
+			<ARTIST>Cat Stevens</ARTIST>
+			<COUNTRY>UK</COUNTRY>
+			<COMPANY>Island</COMPANY>
+			<PRICE>8.90</PRICE>
+			<YEAR>1990</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Stop</TITLE>
+			<ARTIST>Sam Brown</ARTIST>
+			<COUNTRY>UK</COUNTRY>
+			<COMPANY>A and M</COMPANY>
+			<PRICE>8.90</PRICE>
+			<YEAR>1988</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Bridge of Spies</TITLE>
+			<ARTIST>T'Pau</ARTIST>
+			<COUNTRY>UK</COUNTRY>
+			<COMPANY>Siren</COMPANY>
+			<PRICE>7.90</PRICE>
+			<YEAR>1987</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Private Dancer</TITLE>
+			<ARTIST>Tina Turner</ARTIST>
+			<COUNTRY>UK</COUNTRY>
+			<COMPANY>Capitol</COMPANY>
+			<PRICE>8.90</PRICE>
+			<YEAR>1983</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Midt om natten</TITLE>
+			<ARTIST>Kim Larsen</ARTIST>
+			<COUNTRY>EU</COUNTRY>
+			<COMPANY>Medley</COMPANY>
+			<PRICE>7.80</PRICE>
+			<YEAR>1983</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Pavarotti Gala Concert</TITLE>
+			<ARTIST>Luciano Pavarotti</ARTIST>
+			<COUNTRY>UK</COUNTRY>
+			<COMPANY>DECCA</COMPANY>
+			<PRICE>9.90</PRICE>
+			<YEAR>1991</YEAR>
+		</CD>
+		<CD>
+			<TITLE>The dock of the bay</TITLE>
+			<ARTIST>Otis Redding</ARTIST>
+			<COUNTRY>USA</COUNTRY>
+			<COMPANY>Stax Records</COMPANY>
+			<PRICE>7.90</PRICE>
+			<YEAR>1968</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Picture book</TITLE>
+			<ARTIST>Simply Red</ARTIST>
+			<COUNTRY>EU</COUNTRY>
+			<COMPANY>Elektra</COMPANY>
+			<PRICE>7.20</PRICE>
+			<YEAR>1985</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Red</TITLE>
+			<ARTIST>The Communards</ARTIST>
+			<COUNTRY>UK</COUNTRY>
+			<COMPANY>London</COMPANY>
+			<PRICE>7.80</PRICE>
+			<YEAR>1987</YEAR>
+		</CD>
+		<CD>
+			<TITLE>Unchain my heart</TITLE>
+			<ARTIST>Joe Cocker</ARTIST>
+			<COUNTRY>USA</COUNTRY>
+			<COMPANY>EMI</COMPANY>
+			<PRICE>8.20</PRICE>
+			<YEAR>1987</YEAR>
+		</CD>
+	</SONGS>
+	<MOVIES>
+		<INDIAN>
+			<BOLLYWOOD>
+				<CD>
+					<TITLE>3 Idiots</TITLE>
+					<DIRECTOR>Rajkumar Hirani</DIRECTOR>
+					<ACTORS>Aamir Khan, Sharman Joshi, R Madhavan, Kareena Kapoor, Mona Singh</ACTORS>
+					<YEAR>2009</YEAR>
+				</CD>
+				<CD>
+					<TITLE>Veer- Zaara</TITLE>
+					<DIRECTOR>Yash Chopra</DIRECTOR>
+					<ACTORS>Shahrukh Khan, Preity Zinta, Rani Mukherjee, Manoj Bajepayee</ACTORS>
+					<YEAR>2004</YEAR>
+				</CD>
+				<CD>
+					<TITLE>Bhaag Milkha Bhaag</TITLE>
+					<DIRECTOR>Rakeysh Omprakash Mishra</DIRECTOR>
+					<ACTORS>Farhan Akhter, Sonam Kapoor, Pawan Malhotra</ACTORS>
+					<YEAR>2004</YEAR>
+				</CD>
+				<CD>
+					<TITLE>Bhagham Bhaag</TITLE>
+					<DIRECTOR>Priyadarshan</DIRECTOR>
+					<ACTORS>Akshay Kumar, Govinda, Paresh Rawal, Lara Dutta</ACTORS>
+					<YEAR>2006</YEAR>
+				</CD>
+				<CD>
+					<TITLE>Phir Hera Pheri</TITLE>
+					<DIRECTOR>Neeraj Vora</DIRECTOR>
+					<ACTORS>Akshay Kumar, Sunil Shetty, Paresh Rawal</ACTORS>
+					<YEAR>2006</YEAR>
+				</CD>
+			</BOLLYWOOD>
+			<MARATHI>
+				<CD>
+					<TITLE>Silence : The Court is in Session</TITLE>
+					<DIRECTOR>Sataydev Dubey</DIRECTOR>
+					<ACTORS>Arvind Deshpande, Sulbha Deshpande, Amol Palekar</ACTORS>
+					<YEAR>1971</YEAR>
+				</CD>
+				<CD>
+					<TITLE>Mee Shivajiraje Bhosale Boltoy</TITLE>
+					<DIRECTOR> Santosh Ramdas Manjrekar</DIRECTOR>
+					<ACTORS> Mahesh Manjrekar, Sachin Khedekar, Makarand Anaspure, Siddarth Jadhav</ACTORS>
+					<YEAR>2009</YEAR>
+				</CD>
+				<CD>
+					<TITLE> A Breath</TITLE>
+					<DIRECTOR>Sandeep Sawant</DIRECTOR>
+					<ACTORS> Arun Nalawade, Ashwin Chitale, Sandeep Kulkarni, Amruta Subhash</ACTORS>
+					<YEAR>2004</YEAR>
+				</CD>
+			</MARATHI>
+		</INDIAN>
+		<CHINESE>
+			<CD>
+				<TITLE>Shaolin Soccer</TITLE>
+				<DIRECTOR>Stephen Chow</DIRECTOR>
+				<ACTORS>Stephen Chow, Wei Zhao, Man-Tat Ng</ACTORS>
+				<YEAR>2001</YEAR>
+			</CD>
+			<CD>
+				<TITLE>Mulan</TITLE>
+				<DIRECTOR>Niki Caro</DIRECTOR>
+				<ACTORS>Liu Yifei, Donnie Yen, Jet Li</ACTORS>
+				<YEAR>2020</YEAR>
+			</CD>
+		</CHINESE>
+		<KOREAN>
+			<CD>
+				<TITLE>Train to Busan</TITLE>
+				<DIRECTOR>Sang-ho Yeon</DIRECTOR>
+				<ACTORS> Gong Yoo, Yu-mi Jung, Ma Dong-seok, Su-an Kim</ACTORS>
+				<YEAR>2016</YEAR>
+			</CD>
+			<CD>
+				<TITLE>Parasite</TITLE>
+				<DIRECTOR>Bong Joon Ho</DIRECTOR>
+				<ACTORS>Kang-ho Song, Sun-kyun Lee, Yeo-jeong Cho, Woo-sik Choi</ACTORS>
+				<YEAR>2019</YEAR>
+			</CD>
+		</KOREAN>
+		<Japanese>
+			<CD>
+				<TITLE>Your Name</TITLE>
+				<DIRECTOR>Makoto Shinkai</DIRECTOR>
+				<ACTORS> Ryûnosuke Kamiki, Mone Kamishiraishi, Ryô Narita, Aoi Yûki</ACTORS>
+				<YEAR>2016</YEAR>
+			</CD>
+			<CD>
+				<TITLE>Death Note</TITLE>
+				<DIRECTOR>Shûsuke Kaneko</DIRECTOR>
+				<ACTORS>Tatsuya Fujiwara, Ken'ichi Matsuyama, Asaka Seto, Yû Kashii</ACTORS>
+				<YEAR>2006</YEAR>
+			</CD>
+		</Japanese>
+		<AMERICAN>
+			<CD>
+				<TITLE>The Avengers</TITLE>
+				<DIRECTOR>Joss Whedon</DIRECTOR>
+				<ACTORS>Robert Downey Jr., Chris Evans, Chris Hemsworth, Tom Hiddleston</ACTORS>
+				<YEAR>2012</YEAR>
+			</CD>
+			<CD>
+				<TITLE>Captain America : Civil War</TITLE>
+				<DIRECTOR>Anthony Russo, Joe Russo</DIRECTOR>
+				<ACTORS>Robert Downey Jr., Chris Evans, Elizabeth Olsen, Scarlett Johansson</ACTORS>
+				<YEAR>2012</YEAR>
+			</CD>
+		</AMERICAN>
+	</MOVIES>
+</CATALOG>
