@@ -65,11 +65,39 @@ function activate(context) {
                       ignoreComment: true,
                       spaces: 4,
                     };
-                    var modifiedSongsData = xmlParser.js2xml(
-                      message.data,
-                      options
-                    );
-                    console.log(modifiedSongsData);
+                    var jsonDataString = xmlParser.xml2json(xmlFile, options);
+                    var jsonDataObject = JSON.parse(jsonDataString);
+
+                    var modifiedSongsData = message.data;
+                    jsonDataObject.CATALOG["SONGS"] = modifiedSongsData;
+                    console.log(jsonDataObject);
+
+                    // var DOMParser = dom.window.DOMParser;
+                    // var parser1 = new DOMParser();
+                    // const modifiedSongsDataNode = parser1.parseFromString(
+                    //   modifiedSongsData,
+                    //   "text/xml"
+                    // );
+                    // console.log(modifiedSongsDataNode.documentElement);
+
+                    // var oldSongsData =
+                    //   dom.window.document.documentElement.children[0].outerHTML;
+
+                    // var parser2 = new DOMParser();
+                    // const oldSongsDataNode = parser2.parseFromString(
+                    //   oldSongsData,
+                    //   "text/xml"
+                    // );
+                    // console.log(oldSongsDataNode.documentElement);
+
+                    // dom.window.document.documentElement.replaceChild(
+                    //   modifiedSongsDataNode,
+                    //   oldSongsDataNode
+                    // );
+
+                    // console.log(
+                    //   dom.window.document.documentElement.children[0].outerHTML
+                    // );
                     return;
                 }
               },
@@ -230,8 +258,14 @@ function activate(context) {
                                 }
                                 
 
-                                function saveSongsChanges(){                          
-                                  var modifiedSongsData = [];
+                                function saveSongsChanges(){
+                                  // const options = {
+                                  //   compact: true,
+                                  //   ignoreComment: true,
+                                  //   spaces: 4,
+                                  // };
+                                  // var completeJsonData = xmlParser.xml2js(fileData, options);                          
+                                  //var modifiedSongsData = [];
                                   var data = [];
                                   var tableData = document.getElementById("songsTable");
                                   var rowLength = tableData.rows.length;
@@ -246,11 +280,10 @@ function activate(context) {
                                       }
                                       data.push({CD : rowEntry});        
                                   }
-                                  modifiedSongsData.push({SONGS : data});
-                                  console.log(modifiedSongsData);
+                                  //modifiedSongsData.push({SONGS : data});
                                   vscode.postMessage({
                                     command : "SONGS", 
-                                    data: modifiedSongsData[0]
+                                    data: data
                                   });
                                 }
 
