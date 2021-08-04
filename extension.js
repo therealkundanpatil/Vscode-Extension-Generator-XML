@@ -1,7 +1,9 @@
 const vscode = require("vscode");
 const fs = require("fs");
 const path = require("path");
-
+const xmlParser = require("xml-js");
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 /**
  * @param {vscode.ExtensionContext} context
  */
@@ -31,6 +33,7 @@ function activate(context) {
             console.log("Selected File : " + fileUri[0].fsPath);
             const filePath = fileUri[0].fsPath;
             const xmlFile = fs.readFileSync(filePath, "utf-8");
+            const dom = new JSDOM(xmlFile, { contentType: "text/xml" });
 
             const panel = vscode.window.createWebviewPanel(
               "openWebView",
@@ -51,9 +54,28 @@ function activate(context) {
               data: xmlFile,
             });
 
-            // panel.webview.onDidReceiveMessage((message) => {
-            //   console.log(message);
-            // });
+            panel.webview.onDidReceiveMessage(
+              (message) => {
+                switch (message.command) {
+                  case "alert":
+                    return;
+                  case "SONGS":
+                    const options = {
+                      compact: true,
+                      ignoreComment: true,
+                      spaces: 4,
+                    };
+                    var modifiedSongsData = xmlParser.js2xml(
+                      message.data,
+                      options
+                    );
+                    console.log(modifiedSongsData);
+                    return;
+                }
+              },
+              undefined,
+              context.subscriptions
+            );
 
             function getWebviewContent() {
               return `<!DOCTYPE html>
@@ -68,11 +90,14 @@ function activate(context) {
                             <h1>The Tool Kit </h1>    
                             <div id = "left" style="float:left; width: 20%">
                             </div>
-                            <div id = "right" style="float:right;">
+                            <div id = "right" style="width:80%">
+                              <div id = "rightButton"></div>
+                              <div id = "rightTable"></div>
                             </div>
 
                             <script >
                               window.addEventListener('message', event => {
+                                const vscode = acquireVsCodeApi();
                                 const message = event.data;
                                 const fileData = message.data;
                                 var parser = new DOMParser();
@@ -92,6 +117,26 @@ function activate(context) {
                                 
                                 function displaySongsTableData(){
                                   var rightSideDiv = document.getElementById("right");
+                                  var rightSideButton = document.getElementById("rightButton");
+                                  var rightSideTable = document.getElementById("rightTable");
+
+
+                                  var editButton = document.createElement("BUTTON");
+                                  editButton.id = "editButtonId";
+                                  editButton.innerHTML = "EDIT";
+                                  
+
+                                  var saveButton = document.createElement("BUTTON");
+                                  saveButton.id = "saveButtonId";
+                                  saveButton.innerHTML = "SAVE";
+                                 
+                                  
+                                  rightSideButton.appendChild(editButton);
+                                  rightSideButton.appendChild(saveButton);
+                                  rightSideDiv.append(rightSideButton);
+                                  document.getElementById("editButtonId").addEventListener("click",makeSongsTableEditable);
+                                  document.getElementById("saveButtonId").addEventListener("click",saveSongsChanges);
+                                  
                                   var songsTable = document.createElement("TABLE");
                                   songsTable.id = "songsTable";
                                   songsTable.cellPadding = "10px";
@@ -173,9 +218,42 @@ function activate(context) {
                                     
                                     songsTable.children[1].appendChild(tableRow);
                                   }
-                                  rightSideDiv.appendChild(songsTable);
+                                  rightSideTable.appendChild(songsTable);
+                                  rightSideDiv.append(rightSideTable);
                                   console.log(rightSideDiv);
+
                                 }
+
+
+                                function makeSongsTableEditable(){
+                                  console.log("Editing");
+                                }
+                                
+
+                                function saveSongsChanges(){                          
+                                  var modifiedSongsData = [];
+                                  var data = [];
+                                  var tableData = document.getElementById("songsTable");
+                                  var rowLength = tableData.rows.length;
+                                  for( var rowCounter = 1; rowCounter < rowLength; rowCounter++ ){
+                                      var rowEntry = {
+                                        TITLE : tableData.rows[rowCounter].cells[0].innerHTML,
+                                        ARTIST : tableData.rows[rowCounter].cells[1].innerHTML,
+                                        COUNTRY : tableData.rows[rowCounter].cells[2].innerHTML,
+                                        COMPANY : tableData.rows[rowCounter].cells[3].innerHTML,
+                                        PRICE : tableData.rows[rowCounter].cells[4].innerHTML,
+                                        YEAR : tableData.rows[rowCounter].cells[5].innerHTML
+                                      }
+                                      data.push({CD : rowEntry});        
+                                  }
+                                  modifiedSongsData.push({SONGS : data});
+                                  console.log(modifiedSongsData);
+                                  vscode.postMessage({
+                                    command : "SONGS", 
+                                    data: modifiedSongsData[0]
+                                  });
+                                }
+
                               }); 
                             </script>
                         </body>
