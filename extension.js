@@ -1,9 +1,11 @@
 const vscode = require("vscode");
 const fs = require("fs");
 const path = require("path");
-const xmlParser = require("xml-js");
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
+const { toXML } = require("jstoxml");
+var format = require("xml-formatter");
+
 /**
  * @param {vscode.ExtensionContext} context
  */
@@ -60,44 +62,18 @@ function activate(context) {
                   case "alert":
                     return;
                   case "SONGS":
-                    const options = {
-                      compact: true,
-                      ignoreComment: true,
-                      spaces: 4,
+                    const xmlOptions = {
+                      indent: "\t",
                     };
-                    var jsonDataString = xmlParser.xml2json(xmlFile, options);
-                    var jsonDataObject = JSON.parse(jsonDataString);
-
-                    var modifiedSongsData = message.data;
-                    jsonDataObject.CATALOG["SONGS"] = modifiedSongsData;
-                    console.log(jsonDataObject);
-
-                    // var DOMParser = dom.window.DOMParser;
-                    // var parser1 = new DOMParser();
-                    // const modifiedSongsDataNode = parser1.parseFromString(
-                    //   modifiedSongsData,
-                    //   "text/xml"
-                    // );
-                    // console.log(modifiedSongsDataNode.documentElement);
-
-                    // var oldSongsData =
-                    //   dom.window.document.documentElement.children[0].outerHTML;
-
-                    // var parser2 = new DOMParser();
-                    // const oldSongsDataNode = parser2.parseFromString(
-                    //   oldSongsData,
-                    //   "text/xml"
-                    // );
-                    // console.log(oldSongsDataNode.documentElement);
-
-                    // dom.window.document.documentElement.replaceChild(
-                    //   modifiedSongsDataNode,
-                    //   oldSongsDataNode
-                    // );
-
-                    // console.log(
-                    //   dom.window.document.documentElement.children[0].outerHTML
-                    // );
+                    var modifiedSongData = toXML(message.data, xmlOptions);
+                    var root = dom.window.document.documentElement;
+                    var rootChildren = root.children;
+                    rootChildren.item(0).innerHTML = modifiedSongData;
+                    var formattedXml = format(root.outerHTML, {
+                      collapseContent: true,
+                      lineSeparator: "\n",
+                    });
+                    fs.writeFileSync(filePath, formattedXml, { flag: "w" });
                     return;
                 }
               },
@@ -248,7 +224,6 @@ function activate(context) {
                                   }
                                   rightSideTable.appendChild(songsTable);
                                   rightSideDiv.append(rightSideTable);
-                                  console.log(rightSideDiv);
 
                                 }
 
@@ -258,14 +233,7 @@ function activate(context) {
                                 }
                                 
 
-                                function saveSongsChanges(){
-                                  // const options = {
-                                  //   compact: true,
-                                  //   ignoreComment: true,
-                                  //   spaces: 4,
-                                  // };
-                                  // var completeJsonData = xmlParser.xml2js(fileData, options);                          
-                                  //var modifiedSongsData = [];
+                                function saveSongsChanges(){            
                                   var data = [];
                                   var tableData = document.getElementById("songsTable");
                                   var rowLength = tableData.rows.length;
@@ -280,7 +248,6 @@ function activate(context) {
                                       }
                                       data.push({CD : rowEntry});        
                                   }
-                                  //modifiedSongsData.push({SONGS : data});
                                   vscode.postMessage({
                                     command : "SONGS", 
                                     data: data
